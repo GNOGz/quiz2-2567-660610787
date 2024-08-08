@@ -27,8 +27,8 @@ export default function Home() {
         {/* Post Owner Example*/}
         <PostOwnner
           PostTitle="Yutthakarn Sajui 660610787"
-          content="ขอเยอะๆได้ไหมครับอาจารย์"
-          profilePic="/profileImages/sajui_pic.jpg"
+          content="แอร์ห้อง 516 เย็นมากเลยครับ"
+          profilePic="/profileImages/sajui_pic3.jpg"
           likes={0}
         ></PostOwnner>
 
