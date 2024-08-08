@@ -7,7 +7,7 @@ interface CommentComponent {
   username: string;
   commentTitle: string;
   likes: number;
-  replies: ReplyProps[] ;
+  replies: ReplyProps[];
 }
 export default function Comment({
   ImagePath,
@@ -34,18 +34,20 @@ export default function Comment({
           <br />
           <span>{commentTitle}</span>
           <div className="d-flex align-items-center gap-1">
-          {likes > 0 &&<img src="/like.svg" width={20}></img> }
-            { likes > 0 &&<span className="text-muted">{likes}</span>}
+            {likes > 0 && <img src="/like.svg" width={20}></img>}
+            {likes > 0 && <span className="text-muted">{likes}</span>}
           </div>
         </div>
       </div>
       {/* You can use map-loop to render Reply component here */}
-      {replies.map((rep:any)=>(
-        <Reply ImagePath = {rep.userImagePath} 
-        username = {rep.username} 
-        replyTitle = {rep.replyText} 
-        likes ={rep.likes}>
-        </Reply>
+      {replies.map((rep: any) => (
+        <Reply
+          key={rep.username}
+          ImagePath={rep.userImagePath}
+          username={rep.username}
+          replyTitle={rep.replyText}
+          likes={rep.likes}
+        ></Reply>
       ))}
     </div>
   );
