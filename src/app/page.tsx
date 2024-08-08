@@ -35,7 +35,7 @@ export default function Home() {
 
 
         {/* map-loop render Comment component here */}
-        {comments.map((cmd)=>(
+        {comments.map((cmd:any)=>(
           <Comment ImagePath={cmd.userImagePath} 
           username={cmd.username} 
           commentTitle={cmd.commentText} likes={cmd.likeNum} 
