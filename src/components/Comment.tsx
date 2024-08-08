@@ -7,7 +7,7 @@ interface CommentComponent {
   username: string;
   commentTitle: string;
   likes: number;
-  replies: ReplyProps[] | any;
+  replies: ReplyProps[] ;
 }
 export default function Comment({
   ImagePath,

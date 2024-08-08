@@ -6,11 +6,11 @@ import Comment from "@/components/Comment";
 import { ReplyProps } from "../libs/types";
 
 interface CommentComponent {
-  ImagePath: string;
+  userImagePath: string;
   username: string;
-  commentTitle: string;
-  likes: number;
-  replies: ReplyProps[] | any;
+  commentText: string;
+  likeNum: number;
+  replies: ReplyProps[] ;
 }
 
 export default function Home() {
@@ -35,7 +35,7 @@ export default function Home() {
 
 
         {/* map-loop render Comment component here */}
-        {comments.map((cmd:any)=>(
+        {comments.map((cmd:CommentComponent)=>(
           <Comment ImagePath={cmd.userImagePath} 
           username={cmd.username} 
           commentTitle={cmd.commentText} likes={cmd.likeNum} 
