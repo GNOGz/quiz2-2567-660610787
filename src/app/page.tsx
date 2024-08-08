@@ -10,7 +10,7 @@ interface CommentComponent {
   username: string;
   commentText: string;
   likeNum: number;
-  replies: ReplyProps[] ;
+  replies: ReplyProps[];
 }
 
 export default function Home() {
@@ -25,23 +25,24 @@ export default function Home() {
         className="mx-auto p-3 rounded rounded-3 shadow-sm bg-white"
       >
         {/* Post Owner Example*/}
-        <PostOwnner PostTitle="Yutthakarn Sajui 660610787" 
-        content="ขอเยอะๆได้ไหมครับอาจารย์" 
-        profilePic = "/profileImages/sajui_pic.jpg"
-        likes = {0}
-        >
-
-        </PostOwnner>
-
+        <PostOwnner
+          PostTitle="Yutthakarn Sajui 660610787"
+          content="ขอเยอะๆได้ไหมครับอาจารย์"
+          profilePic="/profileImages/sajui_pic.jpg"
+          likes={0}
+        ></PostOwnner>
 
         {/* map-loop render Comment component here */}
-        {comments.map((cmd:CommentComponent)=>(
-          <Comment ImagePath={cmd.userImagePath} 
-          username={cmd.username} 
-          commentTitle={cmd.commentText} likes={cmd.likeNum} 
-          replies={cmd.replies}></Comment>
+        {comments.map((cmd: CommentComponent) => (
+          <Comment
+            key={cmd.username}
+            ImagePath={cmd.userImagePath}
+            username={cmd.username}
+            commentTitle={cmd.commentText}
+            likes={cmd.likeNum}
+            replies={cmd.replies}
+          />
         ))}
-
       </div>
     </div>
   );
