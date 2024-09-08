@@ -46,7 +46,7 @@ export default function Comment({
           ImagePath={rep.userImagePath}
           username={rep.username}
           replyTitle={rep.replyText}
-          likes={rep.likes}
+          likeNum={rep.likeNum}
         ></Reply>
       ))}
     </div>
